@@ -1,0 +1,8 @@
+<svg viewBox="0 0 980 300" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="sq2"><rect x="78" y="78" width="120" height="120"/></clipPath></defs>
+  <rect x="0" y="0" width="980" height="300" fill="#2F2E2B"/>
+  <circle cx="176" cy="176" r="58" fill="none" stroke="#EDEAE0" stroke-width="7" opacity="0.38"/>
+  <circle cx="176" cy="176" r="58" fill="none" stroke="#EDEAE0" stroke-width="7" clip-path="url(#sq2)"/>
+  <rect x="78" y="78" width="120" height="120" fill="none" stroke="#EDEAE0" stroke-width="7"/>
+  <text x="258" y="172" font-family="DejaVu Sans" font-size="62" letter-spacing="1.5" fill="#EDEAE0">Surface Lab</text>
+</svg>
