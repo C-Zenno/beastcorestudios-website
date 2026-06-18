@@ -1,0 +1,2 @@
+# beastcorestudios.com is canonical apex. www variants and .ca regional mirror redirect to apex.
+https://www.beastcorestudios.com/* https://beastcorestudios.com/:splat 301
