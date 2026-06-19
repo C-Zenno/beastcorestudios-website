@@ -1,13 +1,13 @@
 :root {
-  --bg: #0f1110;
-  --panel: #171a18;
-  --panel-2: #1f231f;
-  --ink: #f2efe7;
-  --muted: #b9b2a5;
-  --dim: #8f887b;
-  --line: #343a34;
-  --accent: #d7b36a;
-  --accent-2: #b9d8c2;
+  --bg: #0E100E;
+  --panel: #151812;
+  --panel-2: #1B1E17;
+  --ink: #F1EEE6;
+  --muted: #B8B2A4;
+  --dim: #7D7567;
+  --line: #30352C;
+  --accent: #BFA45A;
+  --accent-2: #D2BD78;
   --paper: #efede6;
   --paper-ink: #33322f;
 }
@@ -67,15 +67,15 @@ main { min-height: calc(100vh - 66px); }
   content: "";
   position: absolute;
   top: 50%;
-  right: -8%;
+  right: -10%;
   transform: translateY(-50%);
-  width: min(720px, 70vw);
-  height: min(720px, 70vw);
-  background-image: url('/favicon.svg');
+  width: min(820px, 78vw);
+  height: min(820px, 78vw);
+  background-image: url('/assets/surface-lab-mark-reversed.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.07;
+  opacity: 0.18;
   pointer-events: none;
   z-index: 0;
 }
