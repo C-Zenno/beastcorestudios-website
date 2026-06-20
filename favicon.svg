@@ -1,5 +1,6 @@
-<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Beastcore Studios">
-  <!-- Beastcore Studios favicon: amber chamfered gem for high-contrast tab visibility at small sizes. -->
-  <polygon points="185,147 147,185 93,185 55,147 55,93 93,55 147,55 185,93"
-           fill="#BFA45A"/>
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs><clipPath id="sq"><rect x="48" y="48" width="120" height="120"/></clipPath></defs>
+  <circle cx="146" cy="146" r="58" fill="none" stroke="#3D3D3A" stroke-width="7" opacity="0.32"/>
+  <circle cx="146" cy="146" r="58" fill="none" stroke="#3D3D3A" stroke-width="7" clip-path="url(#sq)"/>
+  <rect x="48" y="48" width="120" height="120" fill="none" stroke="#3D3D3A" stroke-width="7"/>
 </svg>
