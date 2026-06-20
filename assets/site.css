@@ -46,13 +46,15 @@ nav {
 }
 .brand strong {
   font-family: "Space Grotesk", Inter, sans-serif;
-  letter-spacing: -0.04em;
-  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 .brand span, .nav-links a, .mono {
   font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 11px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--dim);
 }
@@ -156,8 +158,68 @@ h3 { font-size: 24px; letter-spacing: -0.03em; }
 .object svg { width: 100%; display: block; }
 .object span { font-size: 14px; }
 .preview-foot { border-top: 1px solid #e2dfd5; margin-top: 22px; padding-top: 15px; color: #99958b; font-size: 13px; font-style: italic; }
-footer { border-top: 1px solid var(--line); padding: 34px 28px; color: var(--dim); }
+footer { border-top: 1px solid var(--line); padding: 28px 28px 36px; color: var(--dim); position: relative; }
+footer::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 28px;
+  right: 28px;
+  height: 1px;
+  background: var(--line);
+  opacity: 0.4;
+}
 .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.footer-inner > div:first-child {
+  position: relative;
+  padding-left: 14px;
+}
+.footer-inner > div:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 12px;
+  width: 2px;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+
+/* === v0.7 composition hardening pass — homepage only === */
+/* Scoped to body.home to prevent cascade into Surface Lab page body.
+   Parent attribution (nav .brand, footer brand block) stays universal above. */
+.home .hero .kicker {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+  display: inline-block;
+  padding-right: 32px;
+  margin-bottom: 32px;
+}
+.home .hero { padding-top: 132px; }
+.home .lede { max-width: 640px; }
+.home .card {
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+.home .card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.home .card:hover { background: var(--panel-2); }
+.home .card:hover::before { opacity: 1; }
+.home .card .mono {
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 14px;
+}
 @media (max-width: 780px) {
   nav { padding: 0 18px; }
   .brand span, .nav-links { display: none; }
