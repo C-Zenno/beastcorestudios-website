@@ -1,0 +1,37 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Beastcore Studios sigil">
+  <!--
+    Beastcore Studios original sigil.
+    Hand-coded geometric primitives. Chamfered octagonal gem with two hairline rings.
+    Parameters: center 120,120; gem R=70 (flat-top octagon, rotation 22.5deg);
+    inner ring R=82; outer ring R=98; inner table R=35; 8 facet lines between
+    inner table vertices and gem vertices.
+  -->
+
+  <!-- Outer hairline octagon ring -->
+  <polygon points="211,158 158,211 83,211 29,158 29,83 83,29 158,29 211,83"
+           fill="none" stroke="#B8B2A4" stroke-width="1.2" opacity="0.55"/>
+
+  <!-- Inner hairline octagon ring -->
+  <polygon points="196,151 151,196 89,196 44,151 44,89 89,44 151,44 196,89"
+           fill="none" stroke="#B8B2A4" stroke-width="1.2" opacity="0.7"/>
+
+  <!-- Chamfered gem outer silhouette -->
+  <polygon points="185,147 147,185 93,185 55,147 55,93 93,55 147,55 185,93"
+           fill="#0E100E" stroke="#3D3D3A" stroke-width="1.5"/>
+
+  <!-- 8 facet lines connecting inner table vertices to gem vertices -->
+  <g stroke="#3D3D3A" stroke-width="0.9" fill="none" opacity="0.9">
+    <line x1="152" y1="133" x2="185" y2="147"/>
+    <line x1="133" y1="152" x2="147" y2="185"/>
+    <line x1="107" y1="152" x2="93" y2="185"/>
+    <line x1="88" y1="133" x2="55" y2="147"/>
+    <line x1="88" y1="107" x2="55" y2="93"/>
+    <line x1="107" y1="88" x2="93" y2="55"/>
+    <line x1="133" y1="88" x2="147" y2="55"/>
+    <line x1="152" y1="107" x2="185" y2="93"/>
+  </g>
+
+  <!-- Inner table octagon outline -->
+  <polygon points="152,133 133,152 107,152 88,133 88,107 107,88 133,88 152,107"
+           fill="none" stroke="#3D3D3A" stroke-width="0.9"/>
+</svg>

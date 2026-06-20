@@ -45,10 +45,10 @@ nav {
   text-decoration: none;
 }
 .brand strong {
-  font-family: "Space Grotesk", Inter, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0;
-  font-size: 18px;
+  font-family: "Big Shoulders Display", "Space Grotesk", Inter, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  font-size: 24px;
   text-transform: uppercase;
 }
 .brand span, .nav-links a, .mono {
@@ -69,15 +69,15 @@ main { min-height: calc(100vh - 66px); }
   content: "";
   position: absolute;
   top: 50%;
-  right: -10%;
+  right: -8%;
   transform: translateY(-50%);
-  width: min(820px, 78vw);
-  height: min(820px, 78vw);
-  background-image: url('/assets/surface-lab-mark-reversed.svg');
+  width: min(720px, 68vw);
+  height: min(720px, 68vw);
+  background-image: url('/assets/beastcore-sigil-reversed.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 0.18;
+  opacity: 0.32;
   pointer-events: none;
   z-index: 0;
 }
@@ -99,6 +99,17 @@ h1, h2, h3 {
 h1 { font-size: clamp(54px, 9vw, 116px); max-width: 980px; }
 h2 { font-size: clamp(34px, 5.4vw, 64px); max-width: 820px; }
 h3 { font-size: 24px; letter-spacing: -0.03em; }
+
+/* Homepage-scoped brutalist display typography for h1 + h2 */
+.home h1, .home h2 {
+  font-family: "Big Shoulders Display", "Space Grotesk", Inter, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+.home h1 { font-size: clamp(64px, 10.5vw, 132px); }
+.home h2 { font-size: clamp(40px, 6vw, 72px); }
 .lede {
   margin: 28px 0 0;
   color: var(--muted);
