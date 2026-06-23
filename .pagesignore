@@ -1,5 +1,7 @@
 # Cloudflare Pages deploy ignore — beastcorestudios-website
-# Authority: publish-dist skill .pagesignore minimum patterns
+
+# Self-exclude (deploy-control file is not a public artifact)
+.pagesignore
 
 # Source maps (never serve to public)
 *.map
@@ -23,7 +25,7 @@ build/
 .gitignore
 .gitattributes
 
-# Wrangler local state (never serve)
+# Local build-tool state
 .wrangler/
 
 # Editor / IDE / agent local state
@@ -35,11 +37,10 @@ build/
 
 # Internal repo docs (not for public consumption)
 DEPLOY_CHECKLIST.md
-README_DEPLOY.md
 README.md
 CHANGELOG.md
 
-# Internal demo / draft pages (skill minimum pattern)
+# Internal demo / draft pages
 *-demo*.html
 *-internal.html
 *.draft.html

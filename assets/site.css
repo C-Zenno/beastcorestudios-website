@@ -220,6 +220,14 @@ footer::before {
   border-bottom: 1px solid var(--line);
   margin-bottom: 14px;
 }
+.posture-note {
+  margin: 24px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  font-style: italic;
+}
 @media (max-width: 780px) {
   nav { padding: 0 18px; }
   .brand span, .nav-links { display: none; }
