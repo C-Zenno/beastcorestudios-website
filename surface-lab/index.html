@@ -24,6 +24,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script>
+  (function(){
+    try {
+      var stored = localStorage.getItem('bcs-theme');
+      var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', theme === 'light' ? '#f5f3eb' : '#0f1110');
+    } catch(e) {}
+  })();
+  </script>
 </head>
 <body>
 <nav>
@@ -31,9 +42,12 @@
     <strong>Beastcore Studios</strong>
     <span>Surface Labs</span>
   </a>
-  <div class="nav-links">
-    <a href="/">Studio</a>
-    <a href="#preview">Preview</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="/">Studio</a>
+      <a href="#preview">Preview</a>
+    </div>
+    <button type="button" class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme"></button>
   </div>
 </nav>
 <main>
@@ -111,6 +125,20 @@
     </div>
   </section>
 </main>
+<script>
+(function(){
+  document.querySelectorAll('.theme-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('bcs-theme', next); } catch(e) {}
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', next === 'light' ? '#f5f3eb' : '#0f1110');
+    });
+  });
+})();
+</script>
 <footer>
   <div class="footer-inner mono">
     <div>SURFACE LABS · A BEASTCORE STUDIOS LEARNING WORK</div>
