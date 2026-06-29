@@ -12,7 +12,7 @@
   <meta property="og:url" content="https://beastcorestudios.com/surface-lab/">
   <meta property="og:title" content="Surface Labs — Coming Soon">
   <meta property="og:description" content="A free public learning doorway from Beastcore Studios. The deeper claim belongs to the papers.">
-  <meta name="theme-color" content="#0f1110">
+  <meta name="theme-color" content="#f5f3eb">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -27,11 +27,12 @@
   <script>
   (function(){
     try {
+      // v0.14: light is the unconditional default; dark is opt-in via toggle.
       var stored = localStorage.getItem('bcs-theme');
-      var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      var theme = stored === 'dark' ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', theme);
       var meta = document.querySelector('meta[name="theme-color"]');
-      if (meta) meta.setAttribute('content', theme === 'light' ? '#f5f3eb' : '#0f1110');
+      if (meta) meta.setAttribute('content', theme === 'dark' ? '#0f1110' : '#f5f3eb');
     } catch(e) {}
   })();
   </script>

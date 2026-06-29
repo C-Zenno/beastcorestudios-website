@@ -1,29 +1,5 @@
 :root {
-  /* Base palette — dark default */
-  --bg: #0E100E;
-  --panel: #151812;
-  --panel-2: #1B1E17;
-  --ink: #F1EEE6;
-  --muted: #B8B2A4;
-  --dim: #7D7567;
-  --line: #30352C;
-  --accent: #BFA45A;
-  --accent-2: #D2BD78;
-  --paper: #efede6;
-  --paper-ink: #33322f;
-  /* Compositional theme-aware values */
-  --nav-bg: rgba(15,17,16,0.86);
-  --nav-border: rgba(242,239,231,0.08);
-  --gradient-1: rgba(215,179,106,0.11);
-  --gradient-2: rgba(185,216,194,0.08);
-  --hero-mark: url('/assets/surface-lab-mark-reversed.svg');
-  --panel-overlay: rgba(255,255,255,0.025);
-  --toggle-icon: "\2600";  /* ☀ shown in dark mode (click to switch to light) */
-}
-
-/* Manual light theme via [data-theme="light"] — set by the inline init script
-   from localStorage or OS preference. Wins over the @media fallback below. */
-:root[data-theme="light"] {
+  /* Base palette — LIGHT default (v0.14). Dark mode is opt-in via toggle. */
   --bg: #f5f3eb;
   --panel: #fbfaf4;
   --panel-2: #ecebe2;
@@ -33,6 +9,9 @@
   --line: #d4d0c5;
   --accent: #8a6f2e;
   --accent-2: #a98a3e;
+  --paper: #efede6;
+  --paper-ink: #33322f;
+  /* Compositional theme-aware values (light defaults) */
   --nav-bg: rgba(248,246,238,0.86);
   --nav-border: rgba(30,30,28,0.10);
   --gradient-1: rgba(143,118,42,0.10);
@@ -42,26 +21,25 @@
   --toggle-icon: "\1F319";  /* 🌙 shown in light mode (click to switch to dark) */
 }
 
-/* Graceful no-JS fallback: honor OS preference when no [data-theme] is set. */
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]) {
-    --bg: #f5f3eb;
-    --panel: #fbfaf4;
-    --panel-2: #ecebe2;
-    --ink: #1a1c18;
-    --muted: #4f4d44;
-    --dim: #7d7567;
-    --line: #d4d0c5;
-    --accent: #8a6f2e;
-    --accent-2: #a98a3e;
-    --nav-bg: rgba(248,246,238,0.86);
-    --nav-border: rgba(30,30,28,0.10);
-    --gradient-1: rgba(143,118,42,0.10);
-    --gradient-2: rgba(85,140,110,0.08);
-    --hero-mark: url('/assets/surface-lab-mark.svg');
-    --panel-overlay: rgba(0,0,0,0.018);
-    --toggle-icon: "\1F319";
-  }
+/* Dark theme override via [data-theme="dark"] — set by the inline init script
+   from localStorage. Light is the unconditional default; dark is opt-in. */
+:root[data-theme="dark"] {
+  --bg: #0E100E;
+  --panel: #151812;
+  --panel-2: #1B1E17;
+  --ink: #F1EEE6;
+  --muted: #B8B2A4;
+  --dim: #7D7567;
+  --line: #30352C;
+  --accent: #BFA45A;
+  --accent-2: #D2BD78;
+  --nav-bg: rgba(15,17,16,0.86);
+  --nav-border: rgba(242,239,231,0.08);
+  --gradient-1: rgba(215,179,106,0.11);
+  --gradient-2: rgba(185,216,194,0.08);
+  --hero-mark: url('/assets/surface-lab-mark-reversed.svg');
+  --panel-overlay: rgba(255,255,255,0.025);
+  --toggle-icon: "\2600";  /* ☀ shown in dark mode (click to switch to light) */
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
